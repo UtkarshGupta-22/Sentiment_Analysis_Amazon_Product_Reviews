@@ -1,32 +1,96 @@
-🧠 Sentiment Analysis of Amazon Product Reviews
-A machine learning web app that classifies Amazon product reviews into Positive, Negative, or Neutral sentiment using NLP techniques and Logistic Regression. The project is built with Python, trained on custom + real Amazon review data, and deployed using Flask on Render.
+# 🛍️ Sentiment Analysis of Amazon Product Reviews
 
-📌 Features
-Cleaned and preprocessed real-world Amazon review text
+This project is a smart NLP-based sentiment analysis tool that classifies Amazon product reviews into **Positive**, **Negative**, or **Neutral** categories using a **Naive Bayes classifier** and classic text processing techniques.
 
-Handled negations and phrase-based sentiment using TF-IDF with bigrams
+Built by **Utkarsh Gupta** — optimized for fast, reliable, and interpretable results from real-world review data.
 
-Tackled class imbalance with custom examples
+---
 
-Trained Logistic Regression model (95%+ accuracy)
+## Features
 
-Supports real-time sentiment prediction
+- Cleaned and preprocessed Amazon review text
+- Applied **tokenization, stopword removal, stemming**, and **TF-IDF vectorization**
+- Trained with **Multinomial Naive Bayes** for high efficiency and accuracy
+- Supports **real-time sentiment prediction** via a Flask web app
+- Easy to deploy or extend for other review platforms (e.g., Flipkart, Myntra)
 
-Deployed using Flask + Gunicorn on Render
+---
 
-🛠️ Tech Stack
-Language: Python
+## Tech Stack
 
-Libraries: scikit-learn, pandas, joblib, textblob, nltk
+| Component      | Tool Used                      |
+|----------------|--------------------------------|
+| Language        | Python                        |
+| Libraries       | NLTK, Scikit-learn, Pandas     |
+| Model           | Multinomial Naive Bayes        |
+| Vectorization   | TF-IDF                         |
+| Web Framework   | Flask                          |
+| Deployment      | (Optional) Render / Streamlit  |
 
+---
 
-ML Model: Logistic Regression with TF-IDF Vectorization
+## Preprocessing Pipeline
 
-Web Framework: Flask
+1. Convert to lowercase and remove special characters
+2. Tokenization (splitting text into words)
+3. Stopword removal (e.g., "the", "is", "in")
+4. Stemming using Porter Stemmer
+5. TF-IDF Vectorization to extract features
 
-Deployment: Render
+---
 
-Frontend: HTML, CSS (basic form)
+## Model Training & Testing
 
+- **Algorithm**: Multinomial Naive Bayes
+- **Dataset**: Labeled Amazon product reviews
+- **Train-Test Split**: 80-20
+- **Accuracy**: ~85–90% on test data
+- **Evaluation**: Confusion Matrix, Precision, Recall, F1-score
 
-LIVE DEMO : https://sentiment-analysis-kykm.onrender.com/predict
+---
+
+## How to Run Locally
+
+```bash
+git clone https://github.com/your-username/sentiment-analysis-of-amazon-product-reviews.git
+cd sentiment-analysis-of-amazon-product-reviews
+pip install -r requirements.txt
+python app.py
+```
+
+Visit: `http://localhost:5000` to analyze reviews live!
+
+---
+
+## Sample Input
+
+```
+"This product was amazing and arrived on time!"
+```
+
+**Prediction**: Positive 
+
+---
+
+## Applications
+
+- Product review monitoring
+- E-commerce feedback analysis
+- Brand reputation tracking
+- Customer satisfaction prediction
+
+---
+
+## Limitations
+
+- May struggle with sarcasm or complex sentiment
+- Works best on English-language text
+- Simpler than transformer-based models (like BERT)
+
+---
+
+## Author
+
+**Utkarsh Gupta**  
+B.Tech CSE (Data Science) | PSIT Kanpur  
+
