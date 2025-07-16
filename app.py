@@ -22,11 +22,11 @@ def predict():
     prediction_label = model.predict([review])[0]
     prediction = label_map[prediction_label]
 
-    print("Prediction result:", prediction)  # For debugging
+    print("Prediction result:", prediction)
 
     return render_template("index.html", review=review, prediction=prediction)
 
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
-
+    app.run(host="0.0.0.0", port=port, debug=True)
