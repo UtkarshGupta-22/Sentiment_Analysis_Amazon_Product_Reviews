@@ -1,6 +1,8 @@
-# 🛍️ Sentiment Analysis of Amazon Product Reviews
+# Sentiment Analysis of Amazon Product Reviews
 
 This project is a smart NLP-based sentiment analysis tool that classifies Amazon product reviews into **Positive**, **Negative**, or **Neutral** categories using a **Naive Bayes classifier** and classic text processing techniques.
+
+**Live Demo**: [Try it now](https://sentiment-analysis-amazon-product-reviews-3p5s.onrender.com/predict)
 
 Built by **Utkarsh Gupta** — optimized for fast, reliable, and interpretable results from real-world review data.
 
